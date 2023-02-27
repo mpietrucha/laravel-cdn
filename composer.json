@@ -1,0 +1,37 @@
+{
+    "name": "mpietrucha/laravel-cdn",
+    "license": "MIT",
+    "description": "Laravel CDN service with in fly image manipulation and nginx based cache. Crafted to work in desired subdomain. Shipped with nginx config.",
+    "type": "liblary",
+    "autoload": {
+        "psr-4": {
+            "Mpietrucha\\Cdn\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Michał Pietrucha",
+            "email": "michal.pietrucha@off-site.pl"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "spatie/url": "^2.2",
+        "mpietrucha/support": "^1.0",
+        "intervention/image": "^2.7",
+        "matthiasmullie/minify": "^1.3",
+        "guzzlehttp/psr7": "^2.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mpietrucha\\Cdn\\CdnServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
