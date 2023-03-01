@@ -31,9 +31,4 @@ class ImageDriverMixin
     {
         return fn (int $height) => $this->resize(null, $height, true);
     }
-
-    public function placeholder(): Closure
-    {
-        return fn () => $this->resize(1, 1);
-    }
 }
